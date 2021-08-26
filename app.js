@@ -1,5 +1,3 @@
-// CG >= BA
-// ba % CG
 let billAmt;
 let cashAmt;
 let balAmt;
@@ -14,11 +12,12 @@ let five = 0;
 let one = 0;
 
 checkBtn.addEventListener("click", () => {
-  billAmt = parseInt(document.getElementById("bill-amount").value);
-  cashAmt = parseInt(document.getElementById("cash-amount").value);
+  billAmt = Number(document.getElementById("bill-amount").value);
+  cashAmt = Number(document.getElementById("cash-amount").value);
   balAmt = cashAmt - billAmt;
 
-  if (!Number.isInteger(billAmt) && !Number.isInteger(cashAmt)) {
+
+  if (!Number.isInteger(billAmt) || !Number.isInteger(cashAmt)) {
     alert("Please enter a valid number!");
   } else if (cashAmt >= billAmt) {
     if (balAmt >= 2000) {
