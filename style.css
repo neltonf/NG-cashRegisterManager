@@ -1,0 +1,131 @@
+:root {
+  --highlight-color: #7c3aed;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  height: 100vh;
+  border: 0.25rem solid var(--highlight-color);
+}
+
+header {
+  color: var(--highlight-color);
+  margin: 1rem 0rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main > p {
+  text-align: center;
+  word-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1rem;
+}
+
+.bill-form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-bottom: 2rem;
+}
+
+.bill-form > input,
+button {
+  margin-bottom: 1rem;
+  align-self: stretch;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid var(--highlight-color);
+}
+
+.bill-form > button {
+  background-color: var(--highlight-color);
+  color: white;
+  padding: 0.6rem !important;
+  font-weight: bolder;
+}
+
+main > h2 {
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.grid-container > * {
+  padding: 0.1rem;
+  border: 0.1rem solid var(--highlight-color);
+  font-size: 0.75rem;
+}
+
+@media screen and (min-width: 1080px) {
+  body {
+    padding: 0rem;
+    border: 0.5rem solid var(--highlight-color);
+  }
+
+  header {
+    color: var(--highlight-color);
+    margin: 2rem 0rem;
+    font-size: 1.5rem;
+  }
+
+  main > p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .bill-form {
+    width: 800px;
+    margin-bottom: 2rem;
+  }
+
+  .bill-form > h2 {
+    align-self: center;
+    font-size: 1.5rem;
+  }
+
+  .bill-form > input,
+  button {
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+    border: 0.15rem solid var(--highlight-color);
+  }
+
+  .bill-form > button {
+    font-size: 1.25rem;
+    padding: 0.6rem !important;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+  }
+
+  main > h2 {
+    font-weight: 400;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .grid-container > * {
+    padding: 0.75rem;
+    border: 0.1rem solid var(--highlight-color);
+    font-size: 1.5rem;
+  }
+}
